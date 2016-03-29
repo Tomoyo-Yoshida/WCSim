@@ -56,7 +56,8 @@ G4double WCSimWCPMT::rn1pe(){
   if(i==500)
     random = G4UniformRand();
   
-  return (G4double(i-50) + random2)/22.83;
+  //  return (G4double(i-50) + random2)/22.83; // default WCSim
+  return (G4double(i-50) + random2)/19.9113/1.08; // skrn1pe from skdetsim SK1 ap tune
   
 }
 
