@@ -197,7 +197,8 @@ void WCSimWCDigitizerSKI::DigitizeHits(WCSimWCDigitsCollection* WCHCPMT) {
       //integrate charge and start digitizing
       float intgr_start=0;
       float upperlimit=0;
-      G4double efficiency = 0.985; // with skrn1pe (AP tuning) & 30% QE increase in stacking action
+      //      G4double efficiency = 0.985; // with skrn1pe (AP tuning) & 30% QE increase in stacking action
+      G4double efficiency = 1.; // with skrn1pe (AP tuning) & 30% QE increase in stacking action
       int ngate=0;
 
       // Variables to store photon uniqueid that make up a digit
