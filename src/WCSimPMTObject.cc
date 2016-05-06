@@ -553,6 +553,16 @@ G4float  PMT5inch::GetmaxQE(){
   return maxQE;
 }
 
+G4float PMT5inch::GetDarkRate(){
+  const G4float rate = 4.2*CLHEP::kilohertz;
+  return rate;
+}
+
+G4float PMT5inch::GetDarkRateConversionFactor(){
+  const G4float factor = 1.367;
+  return factor;
+}
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
