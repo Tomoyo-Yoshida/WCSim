@@ -34,7 +34,7 @@ void initscattable(){
 void fillscattable() {
   WCSimOpticalPhotonTrackInfo* op = WCSimOpticalPhotonTrackInfo::instance();
   
-  //std::cout<<"fillscattable() nphotons="<<op->getNumPhotons()<<std::endl;
+  std::cout<<"fillscattable() nphotons="<<op->getNumPhotons()<<std::endl;
   // loop over optical photons
   for (int i = 0; i<op->getNumPhotons(); i++){
     if ( op->getPMTId()[ i ] < 0 ) continue;

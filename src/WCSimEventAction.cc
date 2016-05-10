@@ -124,6 +124,9 @@ void WCSimEventAction::CreateDAQInstances()
 
 void WCSimEventAction::BeginOfEventAction(const G4Event*)
 {
+  if(WCSimOpticalPhotonTrackInfo::instance()->isEnabled()) 
+    WCSimOpticalPhotonTrackInfo::instance()->reset();
+
   if(!ConstructedDAQClasses)
     CreateDAQInstances();
 }

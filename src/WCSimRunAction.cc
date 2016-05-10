@@ -44,10 +44,10 @@ WCSimRunAction::~WCSimRunAction()
 
 }
 
-void WCSimRunAction::BeginOfRunAction(const G4Run* aRun)
+void WCSimRunAction::BeginOfRunAction(const G4Run* /*aRun*/)
 {
 
-  fG4Run = aRun;
+  //  fG4Run = aRun;
 
   fSettingsOutputTree = NULL;
   fSettingsInputTree = NULL;
