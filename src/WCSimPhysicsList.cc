@@ -67,9 +67,9 @@ void WCSimPhysicsList::ConstructProcess()
   //AddTransportation();
   ConstructEM();
   ConstructlArStepLimiter();
-  ConstructGeneral();
+  ConstructGeneral(); // for time pdf generation
   ConstructOp();
-  ConstructHad();
+  ConstructHad(); // for time pdf generation
 }
 
 

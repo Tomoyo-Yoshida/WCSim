@@ -194,7 +194,7 @@ void WCSimWCTriggerBase::AlgNDigits(WCSimWCDigitsCollection* WCDCPMT, bool remov
   //loop over PMTs, and Digits in each PMT.  If ndigits > Threshhold in a time window, then we have a trigger
 
   int ntrig = 0;
-  int window_start_time = 0;
+  int window_start_time = -100;
   int window_end_time   = WCSimWCTriggerBase::LongTime - ndigitsWindow;
   int window_step_size  = 5; //step the search window along this amount if no trigger is found
   float lasthit;
@@ -212,6 +212,9 @@ void WCSimWCTriggerBase::AlgNDigits(WCSimWCDigitsCollection* WCDCPMT, bool remov
 
   // the upper time limit is set to the final possible full trigger window
   while(window_start_time <= window_end_time) {
+
+    //    G4cout << "Window start time " << window_start_time << "Window end time " << window_end_time << G4endl;
+
     int n_digits = 0;
     float triggertime; //save each digit time, because the trigger time is the time of the first hit above threshold
     bool triggerfound = false;
@@ -223,6 +226,7 @@ void WCSimWCTriggerBase::AlgNDigits(WCSimWCDigitsCollection* WCDCPMT, bool remov
       //Loop over each Digit in this PMT
       for ( G4int ip = 0 ; ip < (*WCDCPMT)[i]->GetTotalPe() ; ip++) {
 	int digit_time = (*WCDCPMT)[i]->GetTime(ip);
+	//	G4cout << "digit_time " << digit_time << G4endl;
 	//hit in trigger window?
 	if(digit_time >= window_start_time && digit_time <= (window_start_time + ndigitsWindow)) {
 	  n_digits++;
