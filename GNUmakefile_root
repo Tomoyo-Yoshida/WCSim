@@ -19,7 +19,6 @@ G4TMPDIR := $(G4WORKDIR)/tmp/$(G4SYSTEM)/WCSim
 
 
 
-
 # Note dependencies not yet set up right yet
 
 ROOTSO    := libWCSimRoot.so

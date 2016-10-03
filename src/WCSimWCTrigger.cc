@@ -194,8 +194,7 @@ void WCSimWCTriggerBase::AlgNDigits(WCSimWCDigitsCollection* WCDCPMT, bool remov
   //loop over PMTs, and Digits in each PMT.  If ndigits > Threshhold in a time window, then we have a trigger
 
   int ntrig = 0;
-  //  int window_start_time = -100; // for charge pdf
-  int window_start_time = 0;
+  int window_start_time = -100; // for charge pdf
   int window_end_time   = WCSimWCTriggerBase::LongTime - ndigitsWindow;
   int window_step_size  = 5; //step the search window along this amount if no trigger is found
   float lasthit;
