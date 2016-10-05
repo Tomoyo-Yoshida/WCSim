@@ -3,7 +3,7 @@
 #include <stdio.h>     
 #include <stdlib.h>    
 // Simple example of reading a generated Root file
-void sample_readfile(char *filename=NULL, bool verbose=false)
+void sample_readfile(char *filename=NULL, bool verbose=true)
 {
   // Clear global scope
   //gROOT->Reset();
@@ -87,6 +87,7 @@ void sample_readfile(char *filename=NULL, bool verbose=false)
       exit(9);
   }
   geotree->GetEntry(0);
+  cout << "Number of PMTs: " << geo->GetWCNumPMT() << endl;
 
   // start with the main "subevent", as it contains most of the info
   // and always exists.
@@ -100,7 +101,7 @@ void sample_readfile(char *filename=NULL, bool verbose=false)
   int num_trig=0;
   
   // Now loop over events
-  for (int ev=0; ev<nevent; ev++)
+  for (int ev=0; ev<1; ev++)
   {
     // Read the event from the tree into the WCSimRootEvent instance
     tree->GetEntry(ev);      
