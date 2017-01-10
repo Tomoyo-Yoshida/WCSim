@@ -1,4 +1,4 @@
-#include "WCSimWCPMT.hh"
+#Include "WCSimWCPMT.hh"
 #include "WCSimPMTObject.hh"
 #include "WCSimWCDigi.hh"
 #include "WCSimWCHit.hh"
