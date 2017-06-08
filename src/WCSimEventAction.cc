@@ -65,6 +65,7 @@ WCSimEventAction::WCSimEventAction(WCSimRunAction* myRun,
    ConstructedDAQClasses(false),
    SavedOptions(false)
 {
+
   DAQMessenger = new WCSimWCDAQMessenger(this);
 
   G4DigiManager* DMman = G4DigiManager::GetDMpointer();

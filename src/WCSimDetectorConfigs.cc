@@ -426,7 +426,7 @@ void WCSimDetectorConstruction::SetNuPrism_mPMTGeometry()
 	
 	// parameters related to filling the ID mPMT
 	nID_PMTs = 19;
-	config_file = "mPMTconfig_19_nuPrism_3ring.txt"; // for smaller reflector, use: mPMTconfig_19_nuPrism.txt (hex)
+	config_file = "mPMT-configfiles/mPMTconfig_19_nuPrism_3ring.txt"; // for smaller reflector, use: mPMTconfig_19_nuPrism.txt (hex)
 
 	WCIDHeight               = 10.42*CLHEP::m;
     WCIDDiameter             = 7.42*CLHEP::m;

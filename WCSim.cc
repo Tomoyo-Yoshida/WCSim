@@ -91,6 +91,7 @@ int main(int argc,char** argv)
 
   runManager->SetUserAction(myRunAction);
 
+  
   runManager->SetUserAction(new WCSimEventAction(myRunAction, WCSimdetector,
 						 myGeneratorAction));
   runManager->SetUserAction(new WCSimTrackingAction);
